@@ -1,0 +1,103 @@
+{% extends 'template.html' %}
+{% load static %}
+{%block content%}
+<form method="POST" action="/Swfrecordslist/">
+{% csrf_token%}
+	<div class="grid-containerFIVE">
+		<div class="OneITEM">
+			<img src="{%static "img/pigFlu.jpg"%}"/>
+			<h2>Death Rate from African Swine Flu</h2>
+			<p>Domestic pigs get significant symptoms quickly, <br>
+				and up to 100% of them die; there are strains <br>
+				that have a lower fatality rate, but it is <br>
+				still between 30% and 70%. Pigs who make it <br>
+				through the acute phase appear to have a <br>
+				good chance of recovering, but they might <br>
+				be viral carriers for months.</p>
+			<cite>Reference: Wageningen University and Research</cite></div>
+
+		<div class="TwoITEM">
+			<h1>Impacts of African Swine Flu on Pigs</h1>
+			<p> According to the <abbr title="Philippine Statistics Authority">PSA</abbr>, the Philippines' pig population has been reduced by about 3 million as a result of Asiatic Sprague and Swine Fever (ASF). Over 1,000 pigs in Solsona and Dingras town in Ilocos Norte were slaughtered to stop the spread of <abbr title="African Swine Fever">ASF</abbr>. Approximately 3,000 pigs were killed in Cavite province on October 24, 2019 as part of the government's <em>"depopulation"</em>of hog farms in African swine fever-affected regions (ASF). According to Arnel de Mesa <abbr title="Department of Agriculture">(DA)</abbr>,regional director in Calabarzon (Cavite, Laguna, Batangas, Rizal, and Quezon), the pigs were within a 1-kilometer radius of the afflicted farms, namely in Barangay Emmanuel Bergado 1 in Dasmariñas City. 
+			<img src="{%static "img/african-swine-fever.jpg"%}"/></p>
+			<div class="date">
+			<label for="Surname"> Surname: </label>
+			<input type="text" name="surname" id="apelyido"/></div><br>
+
+			<div class="date">
+			<label for="Firstname"> First Name:</label>
+			<input type="text" name="firstname" id="pangalan"/></div><br>
+
+			<div class="date">
+			<label for="MI"> Middle Initial: </label>
+			<input type="text" name="middleInitial" id="gitnangApelyido"/></div><br>
+
+			<div class="date">
+			<label for = "Date"> Date Today: </label>
+			<input type="date" name="date" value=""/> <br></div>
+			<br>
+			<div class="QUESTION">					
+			<label for="question"> As a hog raiser, which of these symptoms have you observed in your pigs? </label><br></div>
+
+			<div class="checkbox">
+			<input type="checkbox" name="Symptoms" id="fev" class="chkbox" value="Fever Listless Pigs = 10%" onclick="sign()"/> Fever Listless Pigs <br>
+			<input type="checkbox" name="Symptoms" id="food" class="chkbox" value="Lack of Appetite = 15%" onclick="sign()"/> Lack of Appetite <br>
+			<input type="checkbox" name="Symptoms" id="skin"class="chkbox" value="Red Skin=10%" onclick="sign()"/> Red Skin <br>
+			<input type="checkbox" name="Symptoms" id="blood" class="chkbox" value="Diarrhoea (bloody) = 15%" onclick="sign()"/> Diarrhoea (bloody) <br>
+			<input type="checkbox" name="Symptoms" id="vomit"class="chkbox" value="Vomiting = 10%" onclick="sign()"/> Vomiting <br>
+			<input type="checkbox" name="Symptoms" id="bleed" class="chkbox" value="Bleeding = 15%"  onclick="sign()"/> Bleeding <br>
+			<input type="checkbox" name="Symptoms" id="cyanosis" class="chkbox"  value="Cyanosis (blue skin) = 10%" onclick="sign()"/> Cyanosis (blue skin)<br>
+			<input type="checkbox" name="Symptoms" id="black"class="chkbox" value="Necrosis (blackening)=15%" onclick="sign()"/> Necrosis (blackening) <br><div> 
+
+			<p class="shows"> It shows here what you've checked on the following symptoms and their equivalent percentage: </p> <br>
+			<textarea class="MESSAGE" name="labelsymp" id="show" rows="5" cols="45"></textarea> <br>
+					
+			<label for="descrip" class="descrip" > Description: </label>
+			<p id="display" style="margin-left: 15px;"> </p>
+
+			<div id = "signs">
+			<label for="otherSYMPTOMS"> Please Specify Other Symptoms: </label>
+			<input type="text" name="text1">
+			</div></div><br> 
+
+			<div class="otherElements"> 
+			<label for="ask"> How many pigs do you observe having symptoms? </label>
+			<input type="number" name="PIGSNUMBERED" value="0" min='0' step="1"/></div><br>
+			<div class="otherElements">
+			<label for=deaths> Did the pigs die? If so, how many died in your region?: </label>
+			<input type="number" name="death" value="0" min='1' step="1"/></div><br> 
+			<div class="date">
+			<label for=region> Select what region you are in: </label>
+			<select name="region" id="regions"  required="true">
+				<option value="NONE"> ----------------------------------- </option> 
+				<option value="ARMM" id="armm"> ARMM </option> 	
+				<option value="CAR" id="car"> CAR </option>
+				<option value="NCR" id="ncr"> NCR </option>
+				<option value="REGION1" id="ilocreg"> ILOCOS REGION </option>
+				<option value="REGION2" id="cv"> CAGAYAN VALLEY </option>
+				<option value="REGION3" id="cenluzon"> CENTRAL LUZON </option>
+				<option value="REGION4A" id="4a"> CALABARZON </option>
+				<option value="REGION4B" id="4b"> MIMAROPA </option>
+				<option value="REGION5" id="bicolreg"> BICOL REGION </option>
+				<option value="REGION6" id="west"> WESTERN VISAYAS </option>
+				<option value="REGION7" id="centralvis"> CENTRAL VISAYAS </option>
+				<option value="REGION8" id="east"> EASTERN VISAYAS </option>
+				<option value="REGION9" id="zambo"> ZAMBOANGA PENINSULA </option>
+				<option value="REGION10" id="north"> NORTHERN MINDANAO </option>
+				<option value="REGION11" id="davao"> DAVAO REGION </option>
+				<option value="REGION12" id="socc"> SOCCSARGEN </option>
+				<option value="REGION13" id="caraga"> CARAGA REGION </option></select></div><br>
+
+			<div class="date">
+			<label for="contact" class="pigEmail"> To contact you, please put your email: </label>
+			<input type="email" name="email" id="econtact" value="" placeholder="Please provide a valid email address" size="27px" placeholder="Please provide a valid email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/><br></div><br>
+
+			<div class="btnCONTAINER">
+			<input type="Submit" name="btnSubmit" style="font-family: monospace;display: 15.5px; inline-block;padding: 6.5px 6.5px;text-align: center;text-decoration: none;color: #FEFCE6;background-color: #502D16;border-radius: 6px;outline: none;" nMouseOver="this.style.color='#965B00'" onMouseOver="this.style.color='#965B00'"onMouseOut="this.style.color='#FEFCE6'"> </div> <br>
+
+			<input type="reset" class="rSET" name="reset" value="RESET" onMouseOver="this.style.color='#965B00'"onMouseOut="this.style.color='#FEFCE6'" />
+			<p><b>Sows may abort upon infection. Pigs may suddenly die without symptoms being observed beforehand.</b></p>
+			<cite>Reference: Wageningen University and Research</cite>
+	        </div>
+</form>
+{% endblock %}

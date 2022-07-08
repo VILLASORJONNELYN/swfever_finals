@@ -1,0 +1,15 @@
+{% extends 'template.html' %}
+
+{% block content %}
+
+<h1>Swine Fever Records Update</h1>
+<form method="POST" action="">
+    {% csrf_token%} 
+    <div> Region {{form.Region}}  </div>
+    <div>Date {{form.Date}} </div>
+    <div>Number of Deaths {{form.Num_Deaths}} </div>
+    <div>
+  <input type='submit' class= 'btn primary' id = 'Save' ></a>
+    </div>
+</form>
+{% endblock %}

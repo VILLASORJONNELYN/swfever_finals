@@ -1,0 +1,238 @@
+/* Pigs - Five */
+
+.grid-containerFIVE {
+	display: grid;
+	grid-template-areas: "Area1 Area2 Area2" 
+                         "Area1 Area2 Area2";
+}
+
+.OneITEM {
+	grid-area: Area1;
+	background-color: #502D16;
+	padding: 14.6px;
+}
+
+	.OneITEM img {
+            border: 3px solid;
+            border-radius: 50%;
+            color: #FEFCE6;
+            padding: 8px;
+            margin: 10px;
+            margin-left: 45px;
+            width: 285px;
+            height: 275px;float: center;
+            display: inline-block;
+	}
+
+	.OneITEM img:hover {
+            box-shadow: 0 0 2px 1px;
+            color: #FEFCE6;
+            justify-content: center;
+        }
+
+	.OneITEM p {
+		font-family: monospace; 
+		font-size: 15.9px;
+		color: #FEFCE6;
+		text-align: justify-all;
+		text-decoration: none;
+		margin: 2px;
+		padding: 2px;
+	}
+
+	.OneITEM h2 {
+	  font-family: inherit;
+	  color: #FEFCE6;
+	  font-size: 27.3px;
+	  text-align: center;
+	}
+
+	.OneITEM cite {
+		font-family: inherit; 
+		color: #FEFCE6;
+		font-size: 16.4px;
+		font-weight: bold;
+		text-align: left;
+	}
+
+.TwoITEM {
+	grid-area: Area2;
+	background-color: #FEFCE6;
+	padding: 14.6px;
+}
+
+	.TwoITEM h1 {
+           font-family: fantasy; 
+           font-size: 40px;
+           color: #502D16;
+           text-align: center;
+           text-decoration: none;
+           margin: 2px;
+	}
+
+	.TwoITEM p {
+		font-family: monospace; 
+		font-size: 15.5px;
+		padding: 5px;
+		color: #502D16;
+		text-align: justify;
+		text-decoration: none;
+		margin: 2px;
+	}
+
+	.QUESTION {
+	  font-family: inherit; 
+	  color: #502D16;
+	  font-size: 18.2px;
+	  font-weight: bold;
+	  text-align: left;
+	  text-decoration: none;
+	  margin-left: 2px;
+	}
+
+	.TwoITEM img {
+		 border: 3px solid;
+		 border-radius: 50%;
+		 color: #502D16;
+		 margin: 35px;
+		 padding: 8px;
+		 width: 170px;
+		 height: 180px;
+		 float: right;
+		 display: inline-block;
+		 justify-content: center;
+	}
+        
+	.TwoITEM img:hover {
+		  box-shadow: 0 0 2px 1px;
+		  color: #502D16;
+		  justify-content: center;
+	}
+
+	.checkbox {
+		font-family: monospace; 
+		margin-left: 18.2px;
+		padding: 3px;
+		color: #502D16;
+		text-align: justify;
+		font-size: 15px;
+	}
+
+	.date {
+		text-align: justify-all;
+		font-family: inherit;
+		color: #502D16;
+		font-size: 17.5px;
+		font-weight: bold;
+	}
+
+	.shows {
+		text-align: justify-all;
+		font-weight: bold;
+		font-family: inherit;
+		font-size: 17.5px;
+	}
+
+	.TwoITEM cite {
+		font-family: inherit; 
+		color: #502D16;
+		font-size: 15.5px;
+		font-weight: bold;
+		justify-content: left;
+		margin-right: 20%;
+	}
+
+	.btnCONTAINER {
+		display: flex;
+	}
+
+	.rSET {
+	 font-family: monospace;
+	 display: 15.5px;
+	 inline-block;padding: 6.5px 6.5px;
+	 text-align: center;
+	 text-decoration: none;
+	 color: #FEFCE6;
+	 background-color: #502D16;
+	 border-radius: 6px;
+	 outline: none;"
+	}
+
+	.HEADERfive {
+                text-align: center;
+                margin-right: 10px;
+                margin-left: 10px;
+                font-size: 19.5px;
+	}
+
+		.PIGSlink {
+			color:#502D16; 
+			font-family: fantasy; 
+			text-decoration: none;
+		}
+
+		.PIGSlinkONE {
+			color:#502D16; 
+			font-family: fantasy; 
+			text-decoration: none;
+			}
+
+		.PIGSlinkTWO {
+			color:#502D16;  
+			font-family: fantasy;  
+			text-decoration: none;
+			text-align: right;
+		}
+
+		.PIGSlinkTHREE {
+			color:#502D16;  
+			font-family: fantasy; 
+			text-decoration: none;
+		}
+
+		.PIGSlinkFOUR {
+			color:#502D16;  
+			font-family: fantasy; 
+			text-decoration: none;
+		}
+
+		.PIGSlinkFIVE {
+			color:#502D16;  
+			font-family: fantasy; 
+			text-decoration: none;
+		}
+
+		.PIGSlinkSIX {
+			color:#502D16;   
+			font-family: fantasy;  
+			text-decoration: none;  
+		}
+
+		.PIGSlinkSEVEN {
+			color:#502D16;  
+			font-family: fantasy;  
+			text-decoration: none;  
+		}
+
+		.PIGSlinkEIGHT {
+			color:#502D16;  
+			font-family: fantasy;  
+			text-decoration: none;  
+		}
+
+		.PIGSlinkNINE {
+			color:#502D16;  
+			font-family: fantasy;  
+			text-decoration: none;  
+		}
+
+		.PIGSlinkTEN {
+			color:#502D16;  
+			font-family: fantasy;  
+			text-decoration: none;  
+		}
+
+
+
+ 
+		

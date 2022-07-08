@@ -1,0 +1,73 @@
+
+{% extends 'template.html' %}
+
+{% block content %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SWF-Records</title>
+<style type="text/css">
+  table, th, td {
+  border-bottom: 1px solid #ddd;
+  }
+</style>
+</head>
+<body>  
+<h1>Swine Fever Records</h1>
+ 
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Surname</th>
+      <th>First Name</th>
+      <th>Middle Initial</th>
+      <th>Email</th>
+      <th>Region</th>
+    </tr>
+
+  </thead>
+  {%for item in data%}
+    <tbody>
+      <tr>
+        <td>{{item.date}}</td>
+        <td>{{item.surname}}</td>
+        <td>{{item.firstname}}</td>
+        <td>{{item.middleInitial}}</td>
+        <td>{{item.email}} </td>
+        <td>{{item.region}}</td>
+        <td>
+        <a class="btn btn-sm" type='button' id = 'Save' href="{% url 'sfsys:delete' item.pk %}" > Delete </a>
+        </td> 
+      </tr>
+
+    </tbody>
+  {%endfor%}
+  </tbody>
+</table>
+<h1>Swine Fever Death Records</h1>
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>No. of Deaths</th>
+      <th>Region</th>
+      <th>Status</th>
+    </tr>
+
+  </thead>
+  {%for items in data1%}
+    <tbody>
+      <tr>
+        <td>{{items.Date}}</td>
+        <td>{{items.Num_Deaths}}</td>
+        <td>{{items.Region}}</td>
+        <td>
+          <a type='button' id = 'Save' href="{% url 'sfsys:updates1' items.pk%}" > Update </a>    <a class="btn btn-sm" type='button' id = 'Save' href="{% url 'sfsys:delete1' items.pk %}" > Delete </a>
+        </td> 
+      </tr>
+
+    </tbody>
+  {%endfor%}
+  </tbody>
+</table>
+{% endblock %}
